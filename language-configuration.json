@@ -1,0 +1,42 @@
+{
+    "comments": {
+        "blockComment": [
+            "///",
+            "///"
+        ],
+        "lineComment": {
+            "comment": "//",
+            "noIndent": false
+        }
+    },
+    "brackets": [
+        [
+            "(",
+            ")"
+        ],
+        [
+            "[",
+            "]"
+        ],
+        [
+            "（",
+            "）"
+        ],
+        [
+            "［",
+            "］"
+        ]
+    ],
+    "indentationRules": {
+        "increaseIndentPattern": "^((?!.*(end|おわり)\\b).*(loop|if|func|ループ|もし|関数).*)$",
+        "decreaseIndentPattern": "^\\s*(end|おわり)\\b"
+    },
+    "autoClosingPairs": [
+        [ "'", "'" ],
+        [ "\"", "\"" ],
+        [ "(", ")" ],
+        [ "[", "]" ],
+        [ "（", "）" ],
+        [ "［", "］" ]
+    ]
+}

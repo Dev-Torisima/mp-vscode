@@ -1,0 +1,92 @@
+{
+  "scopeName": "source.mp",
+  "patterns": [
+    {
+      "begin": "///",
+      "end": "///",
+      "name": "comment.block.mp"
+    },
+    {
+      "match": "//.*$",
+      "name": "comment.line.mp"
+    },
+    {
+      "match": "\\b(def|func|loop|if|elif|else|return|break|continue|end)\\b",
+      "name": "keyword.control.mp"
+    },
+    {
+      "match": "(^|\\s)((ループ|もし|さらにもし)(?=$|\\s|[(（])|(定義|関数|ほか|返す|抜ける|続ける|おわり)(?=$|\\s))",
+      "name": "keyword.control.mp"
+    },
+    {
+      "match": "\\b(num|char|decimal|text|bool|type|var|void)\\b",
+      "name": "keyword.type.mp"
+    },
+    {
+      "match": "(^|\\s)(整数|文字|小数|テキスト|真偽|タイプ|変数|なし)(?=$|\\s)",
+      "name": "keyword.type.mp"
+    },
+    {
+      "match": "\\b(typeof|is|true|false)\\b",
+      "name": "keyword.control.mp"
+    },
+    {
+      "match": "(^|\\s)((が|はい|いいえ)(?=$|\\s)|タイプ取得(?=$|\\s|[(（]))",
+      "name": "keyword.control.mp"
+    },
+    {
+      "match": "[+\\-*/=<>!&\\|%]+",
+      "name": "operator.mp"
+    },
+    {
+      "match": "[％｜＆＋－×÷＝＜＞！]+",
+      "name": "operator.mp"
+    },
+    {
+      "match": "0x[0-9A-Fa-f]+",
+      "name": "constant.numeric.hex.mp"
+    },
+    {
+      "match": "0o[0-7]+",
+      "name": "constant.numeric.oct.mp"
+    },
+    {
+      "match": "0b[0-1]+",
+      "name": "constant.numeric.bin.mp"
+    },
+    {
+      "match": "\\b\\d+(\\.\\d+)?([eE][+-]?\\d+)\\b",
+      "name": "constant.numeric.e.mp"
+    },
+    {
+      "match": "\\d+\\.(\\d+)?",
+      "name": "constant.numeric.float.mp"
+    },
+    {
+      "match": "\\d+",
+      "name": "constant.numeric.mp"
+    },
+    {
+      "begin": "\"",
+      "end": "(?<!\\\\)\"",
+      "name": "string.text.mp"
+    },
+    {
+      "begin": "'",
+      "end": "(?<!\\\\)'",
+      "name": "string.char.mp"
+    },
+    {
+      "match": "\\b\\d+(\\.\\d+)?\\b",
+      "name": "constant.numeric.mp"
+    },
+    {
+      "match": "[A-Za-z_\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFF\uFF10-\uFF5A\uFF21-\uFF3A\uFF41-\uFF5A][A-Za-z0-9_\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFF\uFF10-\uFF5A\uFF21-\uFF3A\uFF41-\uFF5A]*(?=[(（])",
+      "name": "function.mp"
+    },
+    {
+      "match": "[A-Za-z_\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFF\uFF10-\uFF5A\uFF21-\uFF3A\uFF41-\uFF5A][A-Za-z0-9_\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFF\uFF10-\uFF5A\uFF21-\uFF3A\uFF41-\uFF5A]*",
+      "name": "identifier.mp"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+    "name": "minusp",
+    "displayName": "mp言語",
+    "version": "2.4.2",
+    "description": "mp言語用のエラー判定、構文ハイライト、スニペット、補完といった拡張を提供します。This includes error detection, syntax highlighting, snippets, and completions for -p(mp-lang) language",
+    "categories": ["Programming Languages"],
+    "publisher": "torisima",
+    "readme": "README.md",
+    "license":"SEE LICENSE",
+    "icon": "icon.png",
+    "repository": {
+        "url": "https://github.com/Dev-Torisima/mp-vscode"
+    },
+    "engines": {
+        "vscode": "^1.90.0"
+    },
+    "contributes": {
+        "languages": [
+            {
+                "id": "mp",
+                "aliases": [
+                    "MinusP"
+                ],
+                "extensions": [
+                    ".cmpp",
+                    ".cmph"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "mp",
+                "scopeName": "source.mp",
+                "path": "./syntaxes/mp.tmLanguage.json"
+            }
+        ],
+        "themes": [
+            {
+                "label": "mp-white",
+                "uiTheme": "vs",
+                "path": "./themes/mp-white.json"
+            },
+            {
+                "label": "mp-dark",
+                "uiTheme": "vs-dark",
+                "path": "./themes/mp-dark.json"
+            }
+        ]
+    },
+    "activationEvents": [ 
+        "onStartupFinished"
+    ],
+    "main": "./client/extension.js",
+    "browser": "./client/extension-web.js",
+    "dependencies": {
+        "vscode-languageclient": "^9.0.1"
+    }
+}
